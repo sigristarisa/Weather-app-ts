@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0px 56px;
+}
+body header {
+  height: 20vh;
+  align-items: flex-end;
+}
+body header #search {
+  width: 240px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+body main {
+  height: 80vh;
+}
+body main #topContainer {
+  height: 10vh;
+  font-family: "Montserrat", sans-serif;
+}
+body main #topContainer #cityName {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+body main #topContainer #weather {
+  font-size: 28px;
+}
+body main #bottomContainer {
+  height: 70vh;
+}
+body main #bottomContainer #leftContainer {
+  width: 50vw;
+}
+body main #bottomContainer #leftContainer #bottomLeftContainer {
+  width: 25vw;
+  gap: 4px;
+}
+body main #bottomContainer #leftContainer #bottomLeftContainer #temperature {
+  font-family: "Righteous", cursive;
+  font-size: 160px;
+}
+body main #bottomContainer #leftContainer #bottomLeftContainer #celcius {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  align-self: flex-start;
+}
+body main #bottomContainer #leftContainer #bottomRightContainer {
+  gap: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+body main #bottomContainer #rightContainer {
+  width: 50vw;
+}
+body main #bottomContainer #rightContainer #weatherIcon {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.clear {
+  color: #ff8800;
+  background-color: #f1da55;
+}
+.clear #weatherIcon {
+  filter: invert(45%) sepia(83%) saturate(971%) hue-rotate(2deg)
+    brightness(108%) contrast(101%);
+}
+
+.clouds {
+  color: white;
+  background-color: #b3b2a6;
+}
+.clouds #weatherIcon {
+  filter: invert(97%) sepia(60%) saturate(14%) hue-rotate(241deg)
+    brightness(104%) contrast(100%);
+}
+
+.rain {
+  color: #22aaf8;
+  background-color: #177240;
+}
+.rain #weatherIcon {
+  filter: invert(44%) sepia(98%) saturate(1290%) hue-rotate(181deg)
+    brightness(108%) contrast(95%);
+}
