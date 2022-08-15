@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <!-- <link href="./style/style.css" rel="stylesheet" /> -->
+  </head>
+  <body>
+    <header class="flex-column justify-content-center">
+      <input type="text" placeholder="search city" id="search" />
+    </header>
+    <main class="flex-column">
+      <div id="topContainer">
+        <p id="cityName"></p>
+        <p id="weather"></p>
+      </div>
+      <div id="bottomContainer" class="center">
+        <aside id="leftContainer" class="center">
+          <div id="bottomLeftContainer" class="justify-content-center">
+            <p id="temperature"></p>
+            <p id="celcius"></p>
+          </div>
+          <div id="bottomRightContainer" class="flex-column">
+            <p id="feelsLike"></p>
+            <p id="wind"></p>
+            <p id="humidity"></p>
+          </div>
+        </aside>
+        <aside id="rightContainer" class="center">
+          <img
+            id="weatherIcon"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+          />
+        </aside>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
