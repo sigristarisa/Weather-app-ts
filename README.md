@@ -1,4 +1,4 @@
-# Minimalistic Weather App
+# Minimalistic Weather App (with Typscript)
 A frontend project from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-weather-app), aiming to search the weather of a specific location and display the data by using the weather API.
 
 ![weather-app-demo-gif](https://github.com/sigristarisa/Weather-app-ts/blob/main/assets/weather-app-demo.gif)
@@ -9,6 +9,6 @@ A frontend project from [The Odin Project](https://www.theodinproject.com/lesson
 3. Changes the weather icon and color palette according to the weather
 
 ## What Language is Used?
-- Vanilla Javascript
-- Sass
+- Typescript
+- CSS
 - HTML 
