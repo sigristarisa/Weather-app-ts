@@ -1,6 +1,6 @@
 const search = document.getElementById("search") as HTMLInputElement;
 
-interface WeatherData {
+type Data = {
   weather: [
     {
       main: string;
@@ -21,16 +21,9 @@ interface WeatherData {
     country: string;
   };
   name: string;
-}
+};
 
-const createWeatherPage = (data: object) => {
-  let gotData: WeatherData = {
-    weather: data.weather,
-    main: data.main,
-    wind: data.wind,
-    sys: data.sys,
-    name: data.name,
-  };
+const createWeatherPage = (data: Data) => {
   const cityName = document.getElementById("cityName")!;
   const weather = document.getElementById("weather")!;
   const temperature = document.getElementById("temperature")!;
@@ -39,26 +32,23 @@ const createWeatherPage = (data: object) => {
   const wind = document.getElementById("wind")!;
   const humidity = document.getElementById("humidity")!;
 
-  cityName.innerText = `${gotData.name}, ${gotData.sys.country}`;
-  weather.innerText = gotData.weather[0].main;
-  temperature.innerText = `${Math.floor(gotData.main.temp - 273.15)}`;
+  cityName.innerText = `${data.name}, ${data.sys.country}`;
+  weather.innerText = data.weather[0].main;
+  temperature.innerText = `${Math.floor(data.main.temp - 273.15)}`;
   celcius.innerText = `°C`;
   feelsLike.innerText = `Feels like: ${Math.floor(
-    gotData.main.feels_like - 273.15
+    data.main.feels_like - 273.15
   )} °C`;
-  wind.innerText = `Wind: ${Math.floor(gotData.wind.speed)} MPH`;
-  humidity.innerText = `Humidity: ${gotData.main.humidity} %`;
+  wind.innerText = `Wind: ${Math.floor(data.wind.speed)} MPH`;
+  humidity.innerText = `Humidity: ${data.main.humidity} %`;
   search.value = "";
 };
 
-const createWeatherIcon = (data: object) => {
-  let gotData: WeatherData = {
-    weather: data.weather,
-  };
+const createWeatherIcon = (data: Data) => {
   const weatherIcon = document.getElementById(
     "weatherIcon"
   ) as HTMLImageElement;
-  const weatherType = gotData.weather[0].main;
+  const weatherType = data.weather[0].main;
   const clearArr = ["Clear"];
   const cloudArr = ["Clouds", "Haze"];
   const rainArr = ["Rain", "Drizzle", "Mist"];
