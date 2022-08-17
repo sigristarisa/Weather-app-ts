@@ -1,12 +1,5 @@
 var search = document.getElementById("search");
 var createWeatherPage = function (data) {
-    var gotData = {
-        weather: data.weather,
-        main: data.main,
-        wind: data.wind,
-        sys: data.sys,
-        name: data.name
-    };
     var cityName = document.getElementById("cityName");
     var weather = document.getElementById("weather");
     var temperature = document.getElementById("temperature");
@@ -14,21 +7,18 @@ var createWeatherPage = function (data) {
     var feelsLike = document.getElementById("feelsLike");
     var wind = document.getElementById("wind");
     var humidity = document.getElementById("humidity");
-    cityName.innerText = "".concat(gotData.name, ", ").concat(gotData.sys.country);
-    weather.innerText = gotData.weather[0].main;
-    temperature.innerText = "".concat(Math.floor(gotData.main.temp - 273.15));
+    cityName.innerText = "".concat(data.name, ", ").concat(data.sys.country);
+    weather.innerText = data.weather[0].main;
+    temperature.innerText = "".concat(Math.floor(data.main.temp - 273.15));
     celcius.innerText = "\u00B0C";
-    feelsLike.innerText = "Feels like: ".concat(Math.floor(gotData.main.feels_like - 273.15), " \u00B0C");
-    wind.innerText = "Wind: ".concat(Math.floor(gotData.wind.speed), " MPH");
-    humidity.innerText = "Humidity: ".concat(gotData.main.humidity, " %");
+    feelsLike.innerText = "Feels like: ".concat(Math.floor(data.main.feels_like - 273.15), " \u00B0C");
+    wind.innerText = "Wind: ".concat(Math.floor(data.wind.speed), " MPH");
+    humidity.innerText = "Humidity: ".concat(data.main.humidity, " %");
     search.value = "";
 };
 var createWeatherIcon = function (data) {
-    var gotData = {
-        weather: data.weather
-    };
     var weatherIcon = document.getElementById("weatherIcon");
-    var weatherType = gotData.weather[0].main;
+    var weatherType = data.weather[0].main;
     var clearArr = ["Clear"];
     var cloudArr = ["Clouds", "Haze"];
     var rainArr = ["Rain", "Drizzle", "Mist"];
